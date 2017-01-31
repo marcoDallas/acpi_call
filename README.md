@@ -53,12 +53,13 @@ The status after a call can be read back from `/proc/acpi/call`:
 
 #### Graphic interface
 
-Found this too difficult? Try to use these programs provided by Marco Dalla Libera and do it via graphic interface:
+Found this too difficult? Try to use these programs provided by Marco Dalla Libera and do it via graphical interface:
 
 Ubuntu and its derivates before 16.04:
-* [acpi_call_GUI](http://marcodallas.github.io/acpi_call_GUI/)
+[acpi_call_GUI](http://marcodallas.github.io/acpi_call_GUI/)
+
 systemd version for Ubuntu>=16.04 and other linux distros that use systemd:
-* [acpi_call_GUI_systemd(](https://github.com/marcoDallas/acpi_call_GUI_systemd)
+[acpi_call_GUI_systemd](https://github.com/marcoDallas/acpi_call_GUI_systemd)
 
 ***
 Copyright (C) 2017: Marco Dalla Libera - contributor
