@@ -1,3 +1,4 @@
+/* Copyright (c) 2017: Marco Dalla Libera - contributor */
 /* Copyright (c) 2010: Michal Kottman */
 
 #include <linux/module.h>
@@ -6,7 +7,12 @@
 #include <linux/proc_fs.h>
 #include <linux/slab.h>
 #include <asm/uaccess.h>
-#include <acpi/acpi.h>
+
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(3, 17, 0)
+    #include <linux/acpi.h>
+#else
+    #include <acpi/acpi.h>
+#endif
 
 MODULE_LICENSE("GPL");
 
