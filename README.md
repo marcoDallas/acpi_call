@@ -62,7 +62,7 @@ systemd version for Ubuntu>=16.04 and other linux distros that use systemd:
 [acpi_call_GUI_systemd](https://github.com/marcoDallas/acpi_call_GUI_systemd)
 
 ***
-Copyright (C) 2017: Marco Dalla Libera - contributor
+Copyright (C) 2017-2019: Marco Dalla Libera - contributor
 
 Copyright (c) 2010: Michal Kottman
 
