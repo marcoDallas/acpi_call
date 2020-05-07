@@ -1,5 +1,6 @@
-/* Copyright (c) 2017: Marco Dalla Libera - contributor */
+/* Copyright (c) 2017-2020: Marco Dalla Libera - contributor */
 /* Copyright (c) 2010: Michal Kottman */
+/* Version: 1.2.1 */
 
 #include <linux/module.h>
 #include <linux/kernel.h>
@@ -328,11 +329,18 @@ static ssize_t acpi_proc_read( struct file *filp, char __user *buff,
     return ret;
 }
 
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 6, 0)
+static struct proc_ops proc_acpi_operations = {
+        .proc_read     = acpi_proc_read,
+        .proc_write    = acpi_proc_write,
+};
+#else
 static struct file_operations proc_acpi_operations = {
         .owner    = THIS_MODULE,
         .read     = acpi_proc_read,
         .write    = acpi_proc_write,
 };
+#endif
 
 #else
 static int acpi_proc_read(char *page, char **start, off_t off,
